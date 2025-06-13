@@ -100,9 +100,6 @@ def processCommand(c):
     elif "what is the date" in c :
         functions.tell_date()
 
-    elif "let's talk" in c or "chat" in c:
-        functions.gemini_chat_func()
-
     elif "terminate" in c or "stop" in c:
         main.speak("Goodbye Master Sherjil!")
         exit()
