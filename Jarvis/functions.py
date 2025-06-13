@@ -239,29 +239,3 @@ def tell_date():
     date = today.strftime("%A, %d %B %Y")
     main.speak(f"Today is {date}")
     
-################|      Gen-AI Chat     |################
-
-genai.configure(api_key="AIzaSyBLnlLUM_iwB3oQHJxVbJlCxXyWbNjkmq8")
-model = genai.GenerativeModel("models/gemini-pro")
-chat = model.start_chat()
-
-
-def gemini_chat_func():
-    try:
-        main.speak("What do you want to talk about?")
-        with sr.Microphone() as source:
-            audio = main.recognizer.listen(source, timeout=5, phrase_time_limit=10)
-            user_text = main.recognizer.recognize_google(audio)
-            print("You said:", user_text)
-            main.speak(f"You said: {user_text}")
-
-            # Use Gemini
-            response = chat.send_message(user_text)
-            reply = response.text
-
-            print("Gemini:", reply)
-            main.speak(reply)
-
-    except Exception as e:
-        main.speak("Sorry, Jarvis couldn't respond.")
-        print("Jarvis Chat Error:", e)
