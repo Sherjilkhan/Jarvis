@@ -1,7 +1,7 @@
 import speech_recognition as sr
 import pyttsx3
-
 import Commands
+
 # Initialize recognizer and TTS engine
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
@@ -12,7 +12,7 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-# All the Voice commands
+
 
 #  Main Loop
 if __name__ == "__main__":
