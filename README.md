@@ -47,5 +47,5 @@ This project is a smart desktop assistant developed in Python that responds to v
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/voice-assistant-gui.git
+   git clone https://github.com/Sherjilkhan/voice-assistant-gui.git
    cd voice-assistant-gui
